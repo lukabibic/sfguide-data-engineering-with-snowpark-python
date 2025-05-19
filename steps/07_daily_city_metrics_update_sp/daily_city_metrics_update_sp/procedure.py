@@ -107,6 +107,7 @@ def main(session: Session) -> str:
 if __name__ == '__main__':
     # Create a local Snowpark session
     with Session.builder.getOrCreate() as session:
+        session.use_database('HOL_DB')
         import sys
         if len(sys.argv) > 1:
             print(main(session, *sys.argv[1:]))  # type: ignore

@@ -13,3 +13,4 @@ snowpark:
         - name: "temp_f"
           type: "float"
       returns: float
+

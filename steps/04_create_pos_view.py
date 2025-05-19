@@ -108,6 +108,7 @@ def test_pos_view(session):
 if __name__ == "__main__":
     # Create a local Snowpark session
     with Session.builder.getOrCreate() as session:
+        session.use_database("HOL_DB")
         create_pos_view(session)
         create_pos_view_stream(session)
 #        test_pos_view(session)
